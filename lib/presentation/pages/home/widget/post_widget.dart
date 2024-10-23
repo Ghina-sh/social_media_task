@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:linkfy_text/linkfy_text.dart';
 import 'package:social_media_task/app/extensions.dart';
-import 'package:social_media_task/domain/models/home_moduls/post_model.dart';
 import 'package:social_media_task/presentation/pages/home/widget/post_bottom_bar.dart';
 import 'package:social_media_task/presentation/pages/home/widget/post_header.dart';
 import 'package:social_media_task/presentation/pages/home/widget/post_images_page_view.dart';
@@ -9,6 +8,8 @@ import 'package:social_media_task/presentation/pages/home/widget/post_three_imag
 import 'package:social_media_task/presentation/pages/home/widget/tag_widget.dart';
 import 'package:social_media_task/presentation/resources/color_manger.dart';
 import 'package:social_media_task/presentation/resources/font_manger.dart';
+
+import '../../../../data/home/models/home_moduls/post_model.dart';
 
 class PostWidget extends StatelessWidget {
   final PostModel model;

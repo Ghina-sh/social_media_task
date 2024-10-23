@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_fancy_tree_view/flutter_fancy_tree_view.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:social_media_task/app/extensions.dart';
-import 'package:social_media_task/domain/models/home_moduls/tree_node.dart';
 import 'package:social_media_task/presentation/resources/assets_manger.dart';
 import 'package:social_media_task/presentation/resources/color_manger.dart';
 import 'package:social_media_task/presentation/resources/string_manger.dart';
@@ -10,6 +9,7 @@ import 'package:social_media_task/presentation/widgets/app_form_filed.dart';
 import 'package:social_media_task/presentation/widgets/comment_with_reply.dart';
 import 'package:social_media_task/presentation/widgets/suffix_button_for_form_filed.dart';
 
+import '../../../../data/home/models/home_moduls/tree_node.dart';
 import '../../../widgets/comment_widget.dart';
 
 class CommentBottomSheet extends StatefulWidget {

@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:social_media_task/app/extensions.dart';
-import 'package:social_media_task/domain/models/home_moduls/story_model.dart';
 import 'package:social_media_task/presentation/resources/assets_manger.dart';
 import 'package:social_media_task/presentation/resources/color_manger.dart';
 import 'package:social_media_task/presentation/resources/font_manger.dart';
 import 'package:social_media_task/presentation/resources/string_manger.dart';
 import 'package:social_media_task/presentation/widgets/app_icon.dart';
+
+import '../../../../data/home/models/home_moduls/story_model.dart';
 
 class StoryItem extends StatelessWidget {
   final int index;

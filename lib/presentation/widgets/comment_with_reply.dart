@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_fancy_tree_view/flutter_fancy_tree_view.dart';
-import 'package:social_media_task/domain/models/home_moduls/tree_node.dart';
 import 'package:social_media_task/presentation/resources/font_manger.dart';
 import 'package:social_media_task/presentation/resources/string_manger.dart';
+
+import '../../data/home/models/home_moduls/tree_node.dart';
 
 class CommentWithReply extends StatelessWidget {
   final TreeController<MyTreeNode> controller;

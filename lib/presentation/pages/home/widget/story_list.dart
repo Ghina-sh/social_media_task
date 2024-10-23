@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:social_media_task/app/extensions.dart';
-import 'package:social_media_task/domain/models/home_moduls/story_model.dart';
 import 'package:social_media_task/presentation/resources/color_manger.dart';
 import 'package:social_media_task/presentation/resources/routes_manger.dart';
 
+import '../../../../data/home/models/home_moduls/story_model.dart';
 import 'story_circle_widget.dart';
 
 class StoryList extends StatelessWidget {

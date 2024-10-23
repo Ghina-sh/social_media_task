@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:social_media_task/app/extensions.dart';
-import 'package:social_media_task/domain/models/home_moduls/post_model.dart';
+import 'package:social_media_task/presentation/pages/home/getx/home_controller.dart';
 import 'package:social_media_task/presentation/pages/home/widget/home_bottom_nav.dart';
 import 'package:social_media_task/presentation/pages/home/widget/post_widget.dart';
 import 'package:social_media_task/presentation/pages/home/widget/story_list.dart';
@@ -8,7 +9,8 @@ import 'package:social_media_task/presentation/resources/assets_manger.dart';
 import 'package:social_media_task/presentation/widgets/app_icon.dart';
 import 'package:social_media_task/presentation/widgets/background_widget.dart';
 
-class HomeView extends StatelessWidget {
+
+class HomeView extends GetView<HomeController> {
   const HomeView({super.key});
 
   @override
@@ -33,9 +35,9 @@ class HomeView extends StatelessWidget {
             const StoryList(),
             12.verticalSpace(),
             ...List.generate(
-              PostModel.posts.length,
+              controller.posts.length,
               (index) => PostWidget(
-                model: PostModel.posts[index],
+                model: controller.posts[index],
               ),
             ),
           ],

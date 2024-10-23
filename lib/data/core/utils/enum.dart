@@ -1,0 +1,1 @@
+enum PaginationTypes{type1}

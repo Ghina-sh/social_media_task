@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:social_media_task/app/extensions.dart';
-import 'package:social_media_task/domain/models/home_moduls/story_model.dart';
 import 'package:social_media_task/presentation/pages/story/widget/story_item.dart';
 import 'package:social_media_task/presentation/resources/assets_manger.dart';
 import 'package:social_media_task/presentation/resources/font_manger.dart';
 import 'package:social_media_task/presentation/widgets/app_icon.dart';
 import 'package:social_media_task/presentation/widgets/background_widget.dart';
 import 'package:story_time/story_page_view/story_page_view.dart';
+
+import '../../../../data/home/models/home_moduls/story_model.dart';
 
 class StoryView extends StatelessWidget {
   final int initIndex;

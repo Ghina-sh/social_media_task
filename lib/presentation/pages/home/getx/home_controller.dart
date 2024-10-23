@@ -1,30 +1,14 @@
-import 'package:social_media_task/presentation/resources/assets_manger.dart';
-import 'package:social_media_task/presentation/resources/string_manger.dart';
+import 'package:get/get.dart';
+import 'package:social_media_task/data/home/models/home_moduls/post_model.dart';
 
-class PostModel {
-  final String profileImage;
-  final String userName;
-  final String? taggedUser;
-  final String time;
-  final String? description;
-  final List<String>? images;
-  final List<String>? tag;
-  final int likeCount;
-  final int commentCount;
+import '../../../../app/dependency_injection.dart';
+import '../../../../data/home/home_repository.dart';
+import '../../../resources/assets_manger.dart';
+import '../../../resources/string_manger.dart';
 
-  PostModel({
-    required this.profileImage,
-    required this.userName,
-    this.taggedUser,
-    required this.time,
-    this.description,
-    this.images,
-    this.tag,
-    required this.likeCount,
-    required this.commentCount,
-  });
-
-  static List<PostModel> posts = [
+class HomeController extends GetxController {
+  BaseHomeRepository basePostRepository = instance();
+  List<PostModel> posts = [
     PostModel(
       profileImage: ImageAssets.kylieJenner,
       userName: "Kylie Jenner",
@@ -73,4 +57,15 @@ class PostModel {
       commentCount: 128,
     ),
   ];
+
+  getPosts() async {
+    (await basePostRepository.getPosts())
+        .fold((failure) => {}, (posts) => this.posts = posts.posts);
+  }
+
+  @override
+  void onInit() {
+    getPosts();
+    super.onInit();
+  }
 }

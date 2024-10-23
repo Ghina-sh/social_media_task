@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:go_router/go_router.dart';
+import 'package:social_media_task/presentation/pages/home/getx/home_controller.dart';
 import 'package:social_media_task/presentation/pages/home/view/home_view.dart';
 import 'package:social_media_task/presentation/pages/story/view/story_view.dart';
 
@@ -17,7 +19,10 @@ class AppRoutes {
       GoRoute(
         path: homeRoute,
         name: homeRoute,
-        builder: (context, state) => const HomeView(),
+        builder: (context, state) {
+          Get.lazyPut(() => HomeController());
+          return const HomeView();
+        },
       ),
       GoRoute(
         path: storyRoute,
