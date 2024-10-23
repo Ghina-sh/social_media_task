@@ -1,7 +1,10 @@
-import 'package:social_media_task/presentation/resources/assets_manger.dart';
-import 'package:social_media_task/presentation/resources/string_manger.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
+part 'post_model.g.dart';
+
+@HiveType(typeId: 1)
 class PostsModel {
+  @HiveField(0)
   List<PostModel> posts;
 
   PostsModel({required this.posts});
@@ -16,15 +19,25 @@ class PostsModel {
   }
 }
 
+@HiveType(typeId: 2)
 class PostModel {
+  @HiveField(0)
   final String profileImage;
+  @HiveField(1)
   final String userName;
+  @HiveField(2)
   final String? taggedUser;
+  @HiveField(3)
   final String time;
+  @HiveField(4)
   final String? description;
+  @HiveField(5)
   final List<String>? images;
+  @HiveField(6)
   final List<String>? tag;
+  @HiveField(7)
   final int likeCount;
+  @HiveField(8)
   final int commentCount;
 
   PostModel({

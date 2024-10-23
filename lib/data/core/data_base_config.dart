@@ -2,6 +2,7 @@ import 'dart:developer';
 import 'package:hive_flutter/hive_flutter.dart';
 
 import '../../app/data_store_keys.dart';
+import '../home/models/home_moduls/post_model.dart';
 
 class DataBaseConfig {
   DataBaseConfig._internal();
@@ -15,8 +16,8 @@ class DataBaseConfig {
   Future<void> init() async {
     await Hive.initFlutter();
 
-    // Hive.registerAdapter(CurrenciesCountriesEntityAdapter());
-    // Hive.registerAdapter(CurrenciesCountryEntityAdapter());
+    Hive.registerAdapter(PostsModelAdapter());
+    Hive.registerAdapter(PostModelAdapter());
 
     try {
       box = await Hive.openBox(DataStoreKeys.box);
